@@ -23,7 +23,7 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6995524576:AAEVCEcEbEvdk1eGoZ46FyrEH9rCyTCxCjU",
+             bot_token= "7166121629:AAHLN3Xe548E7BcpmIcn4oqAHmJbWKHM30o",
              api_id=22435461,
              api_hash= "fe62b0736218400bf1209d831b6af1a7")
 
@@ -35,13 +35,13 @@ async def account_login(bot: Client, m: Message):
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
 async def restart_handler(_, m):
-    await m.reply_text("**Rukojara**🛑🛑", True)
+    await m.reply_text("**STOP**🛑🛑", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 @bot.on_message(filters.command(["ROHIT"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nDeviyo Or Sajjano File Dijiye**")
+    editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSEND TXT FILE**")
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
@@ -169,8 +169,8 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) TIGER.mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1} TIGER.pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) ROHIT.mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1} ROHIT.pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -211,7 +211,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("🔰Done SANATANI ROHIT🚩🔰")
+    await m.reply_text("🔰Done🔰")
 
 
 bot.run()
