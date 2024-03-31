@@ -10,9 +10,9 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "> Wow Tapatap:
 
 PASS_DB = int(os.environ.get("PASS_DB", "721"))
 
-OWNER = int(os.environ.get("OWNER", 6981453498))
+OWNER = int(os.environ.get("OWNER", 5651162572))
 
-LOG = -1002070057679
+LOG = -1002090024849
 
 try:
     ADMINS=[]
